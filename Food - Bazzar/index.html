@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Offline Google Font Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Food Bazaar Loyalty Rewards</title>
   <style>
     /* cyrillic-ext */
     @font-face {
@@ -116,230 +117,248 @@
       src: url(./fonts/UcCo3FwrK3iLTcviYwY.woff2) format('woff2');
       unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
     }
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
+
     body {
       margin: 0;
       padding: 0;
-      font-family: "Inter", sans-serif;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
       font-style: normal;
+      background-color: #f5f5f5;
     }
+
     .container {
-      background: #f5f5f5;
+      width: 100%;
+      max-width: 430px;
+      margin: 0 auto;
+      background: #ffffff;
+      box-shadow: 0 0 0 1px #e5e5e5;
     }
+
     .img-fluid {
       max-width: 100%;
       height: auto;
     }
+
     .program-intro {
-      background-color: #d1f0e1;
-      padding: 20px 16px;
+      background-color: #d9f3e5;
+      padding: 18px 22px 20px;
     }
+
     .program-intro .section-title {
       margin: 0;
       text-align: center;
-      font-size: 27px;
-    }
-    .program-intro .section-description {
-      margin: 0;
-      font-size: 17px;
-      font-weight: 500;
-    }
-    .program-intro .section-description strong {
+      font-size: 18px;
       font-weight: 800;
-      color: #075c1b;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #000000;
     }
+
     .pro-head-sec {
       display: flex;
       align-items: center;
       gap: 20px;
     }
+
     .milestones {
-      /* background-color: #d1f0e1; */
-      padding: 20px 16px;
+      padding: 22px 20px 32px;
       display: flex;
-      align-items: start;
+      align-items: flex-start;
       gap: 10px;
     }
+
     .section-title {
-      font-size: 25px;
+      font-size: 18px;
       font-weight: 800;
-      margin-bottom: 15px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
     }
+
     .section-description {
-      font-size: 17px;
+      font-size: 14px;
       font-weight: 400;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
+      line-height: 1.4;
     }
+
     .points {
       font-size: 18px;
       color: #e52123;
       margin: 10px 0;
     }
+
     .milestone-list .details {
-      margin-top: 30px;
+      margin-top: 20px;
       font-weight: 600;
     }
+
     .milestone-list .details .save-points {
       font-weight: 800;
     }
+
     .milestone-list .details p {
-      margin-bottom: 8px;
+      margin-bottom: 6px;
       font-weight: 500;
-      font-size: 22px;
+      font-size: 14px;
     }
+
     .milestone-list .details .points {
-      margin-bottom: 8px;
-      font-size: 22px;
+      margin-bottom: 10px;
+      font-size: 14px;
       font-weight: 800;
+      letter-spacing: 0.04em;
     }
+
     .milestone-list .details span {
       font-weight: 600;
-      color: #e52123;
     }
+
     .milestone-footer {
-      font-style: italic;
-      margin-top: 12px;
-      font-weight: 700;
-      font-size: 18px;
+      display: none;
     }
+
     .earn-head {
-      padding: 20px 16px 20px;
+      padding: 22px 20px 14px;
       text-align: center;
     }
+
     .earn-head .section-heading {
       color: #075c1b;
       margin-bottom: 0;
       font-weight: 800;
       line-height: 1;
-      font-size: 36px;
-    }
-    .earn-head p {
-      font-weight: 500;
       font-size: 18px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
     }
+
+    .earn-head p,
+    .earn-head .section-subtext {
+      margin-top: 8px;
+      font-weight: 500;
+      font-size: 14px;
+      color: #000000;
+      text-align: center;
+    }
+
     .section-space {
-      padding: 20px 20px 0 20px;
+      padding: 10px 20px 0 20px;
     }
+
     .line {
       height: 3px;
-      margin: auto;
+      margin: 0 40px;
       background: #d9d9d9;
       border-radius: 20px;
-      margin: 0 65px;
     }
+
     .doted {
-      margin: 0 65px;
-      border-bottom: 10px #e52123 dotted;
+      margin: 18px 40px 12px;
+      border-bottom: 4px #e52123 dotted;
     }
+
     .earn-title {
       color: #075c1b;
-      font-size: 22px;
+      font-size: 15px;
       font-weight: 800;
       margin-bottom: 4px;
       line-height: 1;
+      text-transform: uppercase;
     }
+
     .highlight-red {
       color: #e52123 !important;
       font-weight: 800;
     }
+
     .double-text {
       color: #e52123;
       font-size: 26px;
       font-weight: 600;
     }
+
     .muted-text {
       font-style: italic;
     }
+
     .earn-text {
       font-weight: 400;
-      font-size: 17px;
-      margin-bottom: 10px;
+      font-size: 14px;
+      margin-bottom: 8px;
+      line-height: 1.5;
     }
+
     .milestone-list strong {
       font-style: italic;
     }
-    /* .milestone-list strong, */
+
     .earn-note {
-      margin-top: 25px;
+      margin-top: 6px;
       font-weight: 700;
       font-style: italic;
-      font-size: 18px;
+      font-size: 14px;
       display: block;
     }
+
     .earn-list {
       padding-left: 18px;
       margin-bottom: 8px;
     }
+
     .earn-list li {
-      font-size: 18px;
+      font-size: 14px;
     }
+
     .earn-section {
       display: flex;
-      align-items: start;
+      align-items: flex-start;
       gap: 20px;
-      padding: 20px;
+      padding: 14px 20px 16px;
     }
-    @media (max-width: 1200px) {
-      .milestones img,
-      .earn-section img,
-      .pro-image img {
-        width: 140px;
-      }
-      .milestone-list strong,
-      .earn-note,
-      .program-intro .section-description,
-      .milestone-footer,
-      .earn-text {
-        font-size: calc(25px + (34 - 25) * ((100vw - 280px) / (1200 - 280)));
-      }
-      .section-space {
-        padding: calc(0px + (20 - 0) * ((100vw - 280px) / (1200 - 280))) calc(13px + (20 - 13) * ((100vw - 280px) / (1200 - 280))) 0;
-      }
-      .milestone-list .details {
-        margin-top: calc(15px + (30 - 15) * ((100vw - 280px) / (1200 - 280)));
-      }
-      .milestone-footer {
-        margin: calc(30px + (40 - 30) * ((100vw - 280px) / (1200 - 280))) 0;
-      }
-      .milestone-list .details .points.space {
-        margin: calc(30px + (40 - 30) * ((100vw - 280px) / (1200 - 280))) 0 calc(8px + (30 - 8) * ((100vw - 280px) / (1200 - 280)));
-      }
-      .milestones,
-      .earn-section,
-      .earn-head {
-        padding: calc(40px + (45 - 40) * ((100vw - 280px) / (1200 - 280))) 60px;
-      }
+
+    .milestones img,
+    .earn-section img,
+    .pro-image img {
+      width: 56px;
+      height: auto;
+    }
+
+    /* Small devices fine-tuning */
+    @media (max-width: 360px) {
       .program-intro {
-        padding: calc(25px + (35 - 25) * ((100vw - 280px) / (1200 - 280))) 60px;
+        padding: 14px 16px 16px;
       }
-      .section-description.space,
-      .milestone-list strong.space,
-      .earn-title.space,
-      .earn-text.space {
-        margin-bottom: 25px;
-      }
-      .section-description,
-      .earn-list li,
-      .earn-head p {
-        font-size: calc(28px + (32 - 28) * ((100vw - 280px) / (1200 - 280)));
-      }
-      .milestone-list .details p {
-        font-size: calc(30px + (34 - 30) * ((100vw - 280px) / (1200 - 280)));
-      }
-      .earn-title,
-      .milestone-list .details .points,
+
+      .program-intro .section-title,
+      .earn-head .section-heading,
       .section-title {
-        font-size: calc(40px + (45 - 40) * ((100vw - 280px) / (1200 - 280)));
+        font-size: 16px;
       }
-      .program-intro .section-title {
-        font-size: calc(42px + (45 - 42) * ((100vw - 280px) / (1200 - 280)));
+
+      .section-description,
+      .earn-text,
+      .earn-head p {
+        font-size: 13px;
       }
-      .earn-head .section-heading {
-        font-size: calc(45px + (47 - 45) * ((100vw - 280px) / (1200 - 280)));
+
+      .section-space,
+      .earn-section,
+      .milestones {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+
+      .line,
+      .doted {
+        margin-left: 28px;
+        margin-right: 28px;
       }
     }
   </style>
@@ -348,25 +367,20 @@
   <div class="container">
     <section class="program-intro">
       <h2 class="section-title">FOOD BAZAAR LOYALTY REWARDS PROGRAM DETAILS</h2>
-      <!-- <div class="pro-head-sec">
-        <div class="pro-image">
-          <img src="./images/customer-review.png" />
-        </div>
-        <p class="section-description">
-          <strong>EVERY POINT YOU EARN&nbsp;</strong>moves you toward your next reward and bigger savings.
-        </p>
-      </div> -->
     </section>
+
     <section class="earn-points">
       <div class="earn-head">
         <h2 class="section-heading highlight-red">WAYS TO EARN POINTS</h2>
         <p class="section-subtext">There are many ways to earn Loyalty Reward Points:</p>
       </div>
+
       <div class="section-space">
         <div class="line"></div>
+
         <div class="earn-section">
           <div class="images">
-            <img src="./images/saving.png">
+            <img src="./images/saving.png" alt="Shop &amp; Save">
           </div>
           <div class="earn-card">
             <h3 class="earn-title">SHOP &amp; SAVE</h3>
@@ -378,12 +392,14 @@
             <p class="earn-note">Every grocery trip brings you closer to your next reward.</p>
           </div>
         </div>
+
         <div class="line"></div>
       </div>
+
       <div class="earn-card">
         <div class="earn-section">
           <div class="images">
-            <img src="./images/explore-stamp.png">
+            <img src="./images/explore-stamp.png" alt="Explore Discover Stamp Earn">
           </div>
           <div class="earn-card">
             <h3 class="earn-title">EXPLORE • DISCOVER • STAMP • EARN</h3>
@@ -401,12 +417,14 @@
             <p class="earn-note">Complete more goals. Earn more points. Reach rewards faster.</p>
           </div>
         </div>
+
         <div class="line"></div>
       </div>
+
       <div class="earn-card">
         <div class="earn-section">
           <div class="images">
-            <img src="./images/2X.png">
+            <img src="./images/2X.png" alt="2X Double Points">
           </div>
           <div class="earn-card">
             <h3 class="earn-title space">DOUBLE POINTS DAYS</h3>
@@ -415,45 +433,43 @@
             </p>
             <ul class="earn-list">
               <li>An entire day’s purchases</li>
-              <li>Special bonus items
-              </li>
+              <li>Special bonus items</li>
             </ul>
             <p class="earn-note">Shop smart. Earn faster.</p>
           </div>
         </div>
       </div>
     </section>
+
     <div class="doted"></div>
+
     <div class="earn-head">
       <h2 class="section-heading highlight-red">REDEEM POINTS FOR DISCOUNTS</h2>
-      <p class="section-subtext">Reach points milestones. Redeem for discounts.Repeat</p>
+      <p class="section-subtext">Reach points milestones. Redeem for discounts. Repeat!</p>
     </div>
+
     <div class="line"></div>
+
     <section class="milestones">
       <div class="images">
-        <img src="./images/customer-review.png">
+        <img src="./images/customer-review.png" alt="Reward Points Milestones">
       </div>
       <div class="milestone-list">
         <h2 class="section-title earn-title">REWARD POINTS MILESTONES</h2>
         <p class="section-description space">
-          Each Reward Milestone can be converted into instant discounts at checkout.
+          Every point you earn moves you toward your next Reward Points Milestone and bigger savings. Each
+          milestone reached can be redeemed into <span class="highlight-red">instant discounts at checkout.</span>
         </p>
-        <strong class="space">Turn your points into savings!</strong>
         <div class="details">
-          <p class="points space">POINTS MILESTONES</p>
           <p><strong class="save-points">100,000 points</strong> <span>=</span> $10 Discount</p>
           <p><strong class="save-points">200,000 points</strong> <span>=</span> $25 Discount</p>
           <p><strong class="save-points">300,000 points</strong> <span>=</span> $50 Discount</p>
           <p><strong class="save-points">400,000 points</strong> <span>=</span> $75 Discount</p>
           <p><strong class="save-points">500,000 points</strong> <span>=</span> $100 Discount</p>
         </div>
-        <p class="milestone-footer">
-          Reach milestones. Redeem for Discounts. Repeat!
-        </p>
+        <strong class="space">Turn your points into savings!</strong>
       </div>
     </section>
-  </div>
-  </div>
   </div>
 </body>
 </html>
